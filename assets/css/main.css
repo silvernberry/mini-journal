@@ -145,12 +145,12 @@ hr{
 
 .footertxt {
   margin: 0;
-  color: #FFF;
+  color: var(--body-text-primary);
   text-align: center;
 }
 
 .footerlnk {
-  color: var(--header-text);
+  color: var(--link-primary);
 }
 
 /* #homecnt{
