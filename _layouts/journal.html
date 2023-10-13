@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body>
+    {% include header.html %}
+    <div id="journal" class="wrapper">
+        {% include journalmd.html %}
+        {{content}}
+    </div>
+    <div class="totop">
+        <a href="#">
+          <i class='bx backtop bxs-to-top'></i>
+       </a>
+    </div>
+    {%include mathjax.html%}
+    {% include footer.html %}
+</body>
+</html>

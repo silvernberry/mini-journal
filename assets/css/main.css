@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&family=Roboto+Mono:wght@300;400;500;600&display=swap');
+
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, figure {
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+.highlight {
+  margin-bottom: 15px;
+}
+@media print {
+  
+  #footer, iframe, .headercontainer, .totop, .btncontainer {
+    display: none;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6,
+  p, blockquote, pre, td, th,
+  dl, ol, ul, dd, mjx-math {
+    color: #000;
+  }
+  code.language-plaintext.highlighter-rouge{
+    border: 1px solid #a7a7a7;
+  }
+  code{
+    color: #242424;
+  }
+
+}
+
+a{
+  color: var(--link-primary);
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+p{
+  text-align:justify;
+  line-height: 1.5;
+}
+li{
+  line-height: 1.5;
+}
+:root{
+  --header-primary: #0A0A0A;
+  --body-primary: #242424;
+  --hr-primary: #AA6FD9;
+  --header-text: #8805EE;
+  --body-text-primary: #E6EDF3;
+  --link-primary: #8805EE;
+  --code-primary: #1d1d1d;
+}
+.light-theme{
+  --header-primary: #a771d2;
+  --body-primary: #FBFBFB;
+  --hr-primary: #FAFAFA;
+  --header-text: #FFF;
+  --body-text-primary: #252525;
+  --link-primary: #8805EE;
+  --code-primary: #8a8191;
+}
+
+body{
+  margin: 0px;
+  font-family: 'DM Sans', sans-serif;;
+  font-size: 16px/1.2;
+  background-color: var(--body-primary);
+  color: var(--body-text-primary);
+  
+}
+
+/* Header */
+
+.sitetitle{   
+  text-align: center;
+  color: white;
+  font-size: 2.5em;
+ }
+
+ .headercontainer{
+  background-color: var(--header-primary);
+  padding: 25px 0;
+  margin-bottom: 50px;
+}
+
+header {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+hr{
+  height: 2px;
+  border-style: none;
+  background-color: var(--hr-primary);
+}
+
+.menu a {
+  text-decoration: none;
+  color:var(--header-text);
+  font-size: 1.2rem;
+  margin-right: 25px;
+}
+.menu a:hover{
+  text-decoration: underline;
+}
+
+#themeicon{
+  width: 35px;
+  cursor: pointer;
+}
+
+/* footer */
+
+.footercontainer {
+  /* background-color: var(--header-primary); */  
+  margin-top: 50px;
+  width: 100%;
+  padding: 25px 0;
+  display: flex; /* Add flex properties for centering */
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  position: relative;
+}
+
+.footertxt {
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+}
+
+.footerlnk {
+  color: var(--header-text);
+}
+
+/* #homecnt{
+  height: 100vh;
+} */
+
+/* postlist */
+
+.listcontent{
+    margin-bottom: 30px;
+
+}
+
+.listdate{
+    margin-bottom: 3px;
+    color: var(--body-text-primary);
+}
+.listtitle{
+    font-size: 1.6rem;
+    color: var(--link-primary);
+    text-decoration: none;
+}
+.listtitle:hover{
+  text-decoration: underline;
+}
+
+/* About me */
+
+.profileimg{
+  width: 75px;
+  border-radius: 50px;
+  margin-bottom: 25px;
+}
+
+
+/* journalmd */
+
+.sourcebtn{
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-right: 8px;
+  background-color: #AA6FD9;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+.sourcebtn:hover{
+  background-color: #9c3aec;
+}
+
+.rssbtn{
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-right: 8px;
+  background-color: #fb8f23;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+.rssbtn:hover{
+  background-color: #f26522;
+}
+
+.btnlnk{
+  color: white;
+  text-decoration: none;
+}
+.btnlnk:hover{
+  text-decoration: none;
+}
+.socialbtn{
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-right: 8px;
+  margin-top: 8px;
+  background-color: #5f86e8;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+.socialbtn:hover{
+  background-color: #3165ea;
+}
+
+.btncontainer{
+  margin-bottom: 10px;
+}
+
+.mdicon{
+  margin-right: 3px;
+}
+.sharediv{
+  display: inline;
+  text-align: center;
+  
+}
+.share-menu {
+  margin-top: 15px;
+  display: none;
+  margin-left: 100px;
+  position:absolute;
+  background-color: #5f86e8;
+  border-radius: 5px;
+  z-index: 1;
+  padding: 5px 3px 0;
+
+}
+
+.share-icon {
+  margin: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Back to top */
+
+.totop{
+  position: fixed;
+  right: 35px;
+  bottom: 35px;
+  text-align: right;
+  z-index: 5;
+  /* padding-right: 50px; */
+}
+
+.backtop{
+  font-size: 2rem;
+  background-color: var(--header-primary);
+  border-radius: 5px;
+  padding: 3px;
+  color: white;
+}
+.backtop:hover{
+background-color: var(--link-primary);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* code */
+pre,
+ code {
+  font-family: 'JetBrains Mono', monospace;
+   font-size: 15px;
+
+   border: 1px solid #e8e8e8;
+   border-radius: 3px;
+ }
+ 
+ code {
+   padding: 1px 5px;
+ }
+ 
+ pre {
+   padding: 8px 12px;
+   overflow-x: auto;
+ }
+ pre > code {
+   border: 0;
+   padding-right: 0;
+   padding-left: 0;
+ }
+
+ /* tables */
+
+ table {
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: left;
+  color: var(--body-text-primary);
+  border-collapse: collapse;
+  border: 1px solid #e8e8e8;
+}
+
+table th, table td {
+  padding: 10px 15px;
+}
+table th {
+  background-color: var(--header-primary);
+  border: 1px solid #dedede;
+  border-bottom-color: #c9c9c9;
+}
+table td {
+  border: 1px solid #e8e8e8;
+}
+
+#journal img{
+  width: 100%;
+}
+
+/* others */
+
+
+
+/* breakpoints */
+
+
+@media (max-width: 2560px) {
+    .header{
+        padding: 10px 350px;
+    }
+    .wrapper{
+        margin: auto 350px;
+    }
+}
+@media (max-width: 1440px) {
+    .header{
+        padding: 10px 275;
+    }
+    .wrapper{
+        margin: auto 275px;
+    }
+}
+@media (max-width: 1250px ) {
+    .header{
+        padding: 10px 225px;
+    }
+    .wrapper{
+        margin: auto 225px;
+    }
+}
+@media (max-width: 1024px) {
+    .header{
+        padding: 10px 200px;
+    }
+    .wrapper{
+        margin: auto 200px;
+    }
+}
+    
+@media (max-width: 996px) {
+    .header{
+        padding: 10px 50px  ;
+    }
+    .wrapper{
+        margin: auto 50px;
+    }
+}
+@media (max-width: 425px) {
+    .header{
+        padding: 10px 25px;
+    }
+    .wrapper{
+        margin: auto 25px;
+    }
+}

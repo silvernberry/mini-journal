@@ -1,0 +1,17 @@
+---
+layout: default
+---
+    <h1>All Posts</h1>
+    <br>
+    <div class="listcontainer">
+        {% assign sorted_journals = site.JOURNALS | sort: 'date'  %}
+        {% for page in sorted_journals %}
+                <div class="listcontent">
+                    <p class="listdate">{{ page.date | date: "%d %B %Y" }}</p>
+                    <a class="listtitle" href="{{site.baseurl}}{{page.url | remove: '.html'}}">{{page.title }}</a>
+                </div>
+        {% endfor %}
+    </div>
+
+
+

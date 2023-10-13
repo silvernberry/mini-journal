@@ -1,0 +1,25 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>{{ site.feed.title | xml_escape }}</title>
+  <description>{{ site.feed.description | xml_escape }}</description>
+  <link>{{ site.feed.url | prepend: site.baseurl | xml_escape }}</link>
+  <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | xml_escape }}" rel="self" type="application/rss+xml" />
+  <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" | xml_escape }}</pubDate>
+  <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" | xml_escape }}</lastBuildDate>
+  <generator>Jekyll</generator>
+  {% for page in site.JOURNALS %}
+    <item>
+      <title>{{ page.title | xml_escape }}</title>
+      <description>{{ page.content | xml_escape }}</description>
+      <pubDate>{{ page.date | date: "%a, %d %b %Y " | xml_escape }}</pubDate>
+      <link>{{ page.url | prepend: site.baseurl | xml_escape }}</link>
+      <guid isPermaLink="true">{{ page.url | prepend: site.baseurl | xml_escape }}</guid>
+    </item>
+  {% endfor %}
+</channel>
+</rss>

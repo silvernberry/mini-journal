@@ -1,0 +1,41 @@
+
+    <div class="headercontainer">
+        <div class="wrapper">
+            <h1 class="sitetitle"> <a style="color: white;" href="{{ site.baseurl }}/index">{{site.title}} </a></h1>
+            <hr>
+            <br>
+            <header>
+                <ul class="menu">
+                    <li><a href="{{ site.baseurl }}/pages/allposts">All Posts</a></li>
+                    <li><a href="{{ site.baseurl }}/README">About me</a></li>
+                </ul>
+                <img id="themeicon" src="{{site.baseurl}}/assets/images/light.svg" alt="">
+            </header>
+        </div>    
+    </div>
+    
+    <script>
+        var icon = document.getElementById("themeicon");
+        var isLightTheme = localStorage.getItem("theme") === "light";
+      
+        // Set the initial theme based on the stored value
+        if (isLightTheme) {
+          document.body.classList.add("light-theme");
+          icon.src = "{{site.baseurl}}/assets/images/dark.svg";
+        }
+      
+        icon.onclick = function () {
+          document.body.classList.toggle("light-theme");
+          isLightTheme = document.body.classList.contains("light-theme");
+      
+          // Store the theme preference in localStorage
+          if (isLightTheme) {
+            localStorage.setItem("theme", "light");
+            icon.src = "{{site.baseurl}}/assets/images/dark.svg";
+          } else {
+            localStorage.setItem("theme", "dark");
+            icon.src = "{{site.baseurl}}/assets/images/light.svg";
+          }
+        };
+      </script>
+      

@@ -1,0 +1,69 @@
+
+<div class="btncontainer">
+    <button class="sourcebtn" href="javascript:void(0);" onclick="window.print();"><i class='bx mdicon bxs-file-pdf' style='color:#ffffff' ></i>Download as PDF</button>
+    <button class="sourcebtn"><a class="btnlnk" href="#" target="_blank"><i class='bx mdicon bxl-github' style="color: white;"></i>Edit on Github</a></button>   <!-- If you want the edit on github to work use {% github_edit_link %} in href like href="{% github_edit_link %}" -->
+    <div class="sharediv">
+            <button id="shareButton" class="socialbtn share-button"><i class='bx mdicon bxs-share-alt' style='color:#ffffff'  ></i>Share</a></button>           
+            <div class="share-menu" id="shareMenu">
+                <span class="share-icon" onclick="shareOnWhatsApp()"><i class='bx bxl-whatsapp' style='color:#ffffff'></i></span>
+                <span class="share-icon" onclick="shareViaEmail()"><i class='bx bxs-envelope' style='color:#ffffff' ></i></span>
+                <span class="share-icon" onclick="shareOnTwitter()"><i class='bx bxl-twitter' style='color:#ffffff' ></i></span>
+                <span class="share-icon" onclick="shareOnTelegram()"><i class='bx bxl-telegram' style='color:#ffffff' ></i></span>
+            </div>
+        </div>
+    {% if page.discuss != nil %}        
+    <button class="socialbtn"><i class='bx mdicon bxs-conversation'></i><a class="btnlnk" href="https://example.com/{{page.discuss}}">Discuss</a></button>  
+    {% endif %}  
+    <button class="rssbtn"><a class="btnlnk" href="{{ site.baseurl }}/rss.xml" target="_blank"><i class='bx bx-rss' style="color: #ffffff;" ></i>RSS</a></button>           
+</div>
+
+<h1>{{page.title}}</h1>
+<p> {{page.description}} </p>
+<p><strong>Published on : </strong> {{ page.date | date: "%d %B %Y" }} </p>
+
+{% if page.youtube != nil %}        
+<div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{page.youtube}}" frameborder="0"  allowfullscreen> </iframe>
+</div>
+{% endif %}   
+
+<br>
+{% if page.toc == true %}        
+<h2>Table of contents</h2>
+{% include toc.html html=content %}
+{% endif %}             
+<br>
+
+<!-- share icon script -->
+<script>
+    // JavaScript functions for sharing
+    function shareOnWhatsApp() {
+        window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(window.location.href), "_blank");
+    }
+
+    function shareViaEmail() {
+        window.location.href = "mailto:?body=" + encodeURIComponent("Check out this link: " + window.location.href);
+    }
+
+    function shareOnTwitter() {
+        window.open("https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location.href), "_blank");
+    }
+
+    function shareOnTelegram() {
+        window.open("https://t.me/share/url?url=" + encodeURIComponent(window.location.href), "_blank");
+    }
+
+    // Toggle the share menu
+    document.getElementById("shareButton").addEventListener("click", function () {
+        var shareMenu = document.getElementById("shareMenu");
+        if (shareMenu.style.display === "block") {
+            shareMenu.style.display = "none";
+        } else {
+            shareMenu.style.display = "block";
+        }
+    });
+</script>
+
+
+
+
