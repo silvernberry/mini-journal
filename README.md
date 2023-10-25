@@ -53,6 +53,9 @@ Markdown features supported, with checked options available:
 - [ ] Modern Code Block UI
 - [ ] Mermaid JS Compatibility
 - [ ] PlantUML Diagram Compatibility
+- [ ] System Theme as Default
+- [ ] Journal Translations
+- [ ] Giscus Comments
 
 ## Front Matter
 
