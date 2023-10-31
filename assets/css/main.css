@@ -48,7 +48,12 @@ ul, ol, dl, figure,
   code{
     color: #242424;
   }
-
+  .giscus{
+    display: none;
+  }
+  .giscust{
+    display: none;
+  }
 }
 
 a{
@@ -474,6 +479,12 @@ table td {
   margin-bottom: 15px;
 }
 
+/* giscus */
+
+/* .giscus{
+background-color: var(--comments-primary);
+padding: 25px;
+} */
 
 /* breakpoints */
 

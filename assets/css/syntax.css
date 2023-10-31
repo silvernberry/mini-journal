@@ -5,14 +5,18 @@
   font-style: italic;
 }
 
-.highlighter-rouge{
+/* .highlighter-rouge{
   background-color: var(--highlight-primary);
   border: none;
+} */
+
+code.language-plaintext.highlighter-rouge{
+  border: 1px solid #a7a7a7;
 }
 
 :root{
   --code-primary: #1d1d1d;
-  --highlight-primary: #9d7dbd;
+  --highlight-primary: #070508;
 }
 .light-theme{
   --code-primary: #4e4e4e;
