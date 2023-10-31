@@ -11,15 +11,38 @@
                 <span class="share-icon" onclick="shareOnTelegram()"><i class='bx bxl-telegram' style='color:#ffffff' ></i></span>
             </div>
         </div>
-    {% if page.discuss != nil %}        
-    <button class="socialbtn"><i class='bx mdicon bxs-conversation'></i><a class="btnlnk" href="https://example.com/{{page.discuss}}">Discuss</a></button>  
-    {% endif %}  
+       
+    <button class="socialbtn" id="scrollToGiscus">
+        <i class='bx mdicon bxs-conversation'></i>
+        <a class="btnlnk" href="#">Discuss</a>
+      </button>    
     <button class="rssbtn"><a class="btnlnk" href="{{ site.baseurl }}/rss.xml" target="_blank"><i class='bx bx-rss' style="color: #ffffff;" ></i>RSS</a></button>           
 </div>
 
 <h1>{{page.title}}</h1>
 <p> {{page.description}} </p>
-<p><strong>Published on : </strong> {{ page.date | date: "%d %B %Y" }} </p>
+<p><strong>Created on : </strong> {{ page.date | date: "%d %B %Y" }} </p>
+{% include available_languages.html %}
+
+{% if page.contributors != nil %}
+<p><strong>Contributors : </strong>
+  {% assign contributors = page.contributors | split: ", " %}
+  {% for contributor in contributors %}
+    <a href="https://github.com/{{ contributor }}" target="_blank">{{ contributor }}</a>{% unless forloop.last %}, {% endunless %}
+  {% endfor %}
+</p>
+{% endif %}
+
+{% if page.reviewers != nil %}
+  <p>Special thanks to 
+    <span>
+        {% assign reviewers = page.reviewers | split: ", " %}
+        {% for reviewer in reviewers %}
+        <a href="https://github.com/{{ reviewer }}" target="_blank">{{ reviewer }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}  
+    </span>   
+for conducting  a review on this journal.</p>
+{% endif %}
 
 {% if page.youtube != nil %}        
 <div>
@@ -29,7 +52,7 @@
 
 <br>
 {% if page.toc == true %}        
-<h2>Table of contents</h2>
+<h1>Table of contents</h1>
 {% include toc.html html=content %}
 {% endif %}             
 <br>
@@ -63,6 +86,19 @@
         }
     });
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollToGiscusButton = document.getElementById("scrollToGiscus");
+      const giscusDiv = document.getElementById("giscus-cmt");
+  
+      scrollToGiscusButton.addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent the default behavior of the anchor link
+        giscusDiv.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+  
 
 
 
