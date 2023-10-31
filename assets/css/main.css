@@ -1,8 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&family=Roboto+Mono:wght@300;400;500;600&display=swap');
 
+:root{
+  --header-primary: #0A0A0A;
+  --body-primary: #242424;
+  --hr-primary: #AA6FD9;
+  --header-text: #8805EE;
+  --body-text-primary: #E6EDF3;
+  --link-primary: #8805EE;
+  --code-primary: #1d1d1d;
+}
+.light-theme{
+  --header-primary: #a771d2;
+  --body-primary: #FBFBFB;
+  --hr-primary: #FAFAFA;
+  --header-text: #FFF;
+  --body-text-primary: #252525;
+  --link-primary: #8805EE;
+  --code-primary: #8a8191;
+}
 
 body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
+p, pre, hr,
 dl, dd, figure {
   margin: 0;
   padding: 0;
@@ -47,23 +65,15 @@ p{
 li{
   line-height: 1.5;
 }
-:root{
-  --header-primary: #0A0A0A;
-  --body-primary: #242424;
-  --hr-primary: #AA6FD9;
-  --header-text: #8805EE;
-  --body-text-primary: #E6EDF3;
-  --link-primary: #8805EE;
-  --code-primary: #1d1d1d;
+hr{
+  height: 2px;
+  border-style: none;
+  background-color: #505050;
 }
-.light-theme{
-  --header-primary: #a771d2;
-  --body-primary: #FBFBFB;
-  --hr-primary: #FAFAFA;
-  --header-text: #FFF;
-  --body-text-primary: #252525;
-  --link-primary: #8805EE;
-  --code-primary: #8a8191;
+blockquote {
+  border-left: 2px solid #a771d2; 
+  padding-left: 10px; 
+  margin: 15px 0; 
 }
 
 body{
@@ -97,6 +107,12 @@ header {
   margin: 0;
 }
 
+.headerhr{
+  height: 2px;
+  border-style: none;
+  background-color: var(--hr-primary);
+}
+
 .menu {
   list-style-type: none;
   margin: 0;
@@ -106,12 +122,6 @@ header {
 
 .menu li:last-child {
   margin-right: 0;
-}
-
-hr{
-  height: 2px;
-  border-style: none;
-  background-color: var(--hr-primary);
 }
 
 .menu a {
@@ -342,8 +352,127 @@ table td {
   width: 100%;
 }
 
-/* others */
+#journal img.emoji{
+  width: auto;
+}
 
+/* alerts */
+
+.atitle{
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.aimg {
+  font-size: 22px; /* Adjust the font size to your preference */
+  margin-right: 10px; /* Add some space between the icon and text */
+}
+.ainfo{
+  font-size: 15px;
+  padding: 15px;
+  background-color: #356da2; 
+  color: white; 
+  border-radius: 4px; 
+  margin-bottom: 15px;
+}
+.anote{
+  font-size: 15px;
+  padding: 15px;
+  background-color: #356da2; 
+  color: white; 
+  border-radius: 4px; 
+  margin-bottom: 15px;
+}
+.aexample{
+  font-size: 15px;
+  padding: 15px;
+  background-color: #356da2; 
+  color: white; 
+  border-radius: 4px;
+  margin-bottom: 15px;
+
+}
+.atip{
+  font-size: 15px;
+  padding: 15px;
+  background-color: #356da2; 
+  color: white; 
+  border-radius: 4px; 
+  margin-bottom: 15px;
+}
+.aissue{
+  font-size: 15px;
+  padding: 15px;
+  background-color: #f3901e; 
+  color: white; 
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.asuccess{
+  font-size: 15px;
+  padding: 15px;
+  background-color: #49c72d;
+  color: white; 
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.asolution{
+  font-size: 15px;
+  padding: 15px;
+  background-color: #49c72d; 
+  color: white; 
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.aerror{
+  font-size: 15px;
+  padding: 15px;
+  background-color: #e85449; 
+  color: white; 
+  border-radius: 4px; 
+  margin-bottom: 15px;
+}
+.acheck{
+  font-size: 15px;
+  padding: 15px;
+  background-color: #49c72d;
+  color: white; 
+  border-radius: 4px; 
+  margin-bottom: 15px; 
+}
+.acomplete{
+  font-size: 15px;
+  padding: 15px;
+  background-color: #49c72d; 
+  color: white;
+  border-radius: 4px; 
+  margin-bottom: 15px;
+}
+.aimportant{
+  font-size: 15px;
+  padding: 15px;
+  background-color: #d64a7b; 
+  color: white; 
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.awarning{
+  font-size: 15px;
+  padding: 15px;
+  background-color: #e85449; 
+  color: white; 
+  border-radius: 4px; 
+  margin-bottom: 15px;
+}
+.adanger{
+  font-size: 15px;
+  padding: 15px;
+  background-color: #e85449; 
+  color: white;
+  border-radius: 4px; 
+  margin-bottom: 15px;
+}
 
 
 /* breakpoints */

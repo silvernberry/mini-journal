@@ -37,6 +37,7 @@ plugins:
   - "jekyll-feed"
   - "jekyll-github-metadata"
   - "jekyll-sitemap"
+  - "jemoji"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
