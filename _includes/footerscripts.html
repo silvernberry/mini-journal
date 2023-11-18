@@ -1,0 +1,28 @@
+<!-- giscus theme -->
+<script>
+    // Function to set the Giscus data-theme attribute
+    function setGiscusTheme(themeVariable) {
+      var giscusScript = document.querySelector("script[src='https://giscus.app/client.js']");
+      giscusScript.setAttribute("data-theme", themeVariable);
+    }
+  
+    // Function to handle theme changes
+    function handleThemeChange() {
+      var isLightTheme = localStorage.getItem("theme") === "light";
+      var themeVariable = isLightTheme ? "light_protanopia" : "dark_protanopia";
+  
+      // Update the Giscus data-theme attribute
+      setGiscusTheme(themeVariable);
+    }
+  
+    // Initially set the Giscus data-theme attribute
+    handleThemeChange();
+  
+    // Listen for theme changes and update the Giscus data-theme
+    window.addEventListener("storage", function (event) {
+      if (event.key === "theme") {
+        handleThemeChange();
+      }
+    });
+  </script>
+  
