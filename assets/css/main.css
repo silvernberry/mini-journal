@@ -64,7 +64,6 @@ a:hover{
   text-decoration: underline;
 }
 p{
-  text-align:justify;
   line-height: 1.5;
 }
 li{
@@ -87,7 +86,13 @@ body{
   font-size: 16px/1.2;
   background-color: var(--body-primary);
   color: var(--body-text-primary);
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper{
+  flex: 1;
 }
 
 /* Header */
@@ -147,25 +152,22 @@ header {
 /* footer */
 
 .footercontainer {
-  /* background-color: var(--header-primary); */  
   margin-top: 50px;
-  width: 100%;
-  padding: 25px 0;
-  display: flex; /* Add flex properties for centering */
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  position: relative;
+  width: 100% ;
+  text-align: center;
+  background-color: var(--header-primary);
+  padding: 35px 0px;
+  bottom: 0;
 }
 
 .footertxt {
   margin: 0;
-  color: var(--body-text-primary);
+  color: #fff;
   text-align: center;
 }
 
 .footerlnk {
-  color: var(--link-primary);
+  color: var(--header-text);
 }
 
 /* #homecnt{
