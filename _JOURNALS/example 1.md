@@ -13,8 +13,7 @@ reviewers: username1, username2
 ### Subheading 
 ####  subheading 
 
-
-<img src="https://pfalcon.github.io/wdot/v.html?{{site.url}}{{site.baseurl}}/assets/example.dot">
+<iframe src="https://pfalcon.github.io/wdot/v.html?https://silvernberry.github.io/mini-journal/assets/example.dot" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
 
 <pre id="algorithm">
 \begin{algorithm}

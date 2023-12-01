@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body>
+  <script>
+
+    var url = window.location.href;
+    var i = url.indexOf("?");
+    if (i == -1) {
+      var b = document.body;
+      b.innerHTML += "<p>This is online Graphviz .dot file viewer.</p>";
+      b.innerHTML += "<p>Usage: " + url + "?&lt;url.dot&gt;</p>";
+      var ex_url = url + "?" + url.substring(0, url.lastIndexOf("/") + 1) + "example.dot";
+      b.innerHTML += "<p>Example: <a href='" + ex_url + "'>" + ex_url + "</a></p>";
+      b.innerHTML += "<p>Based on <a href='https://github.com/mdaines/viz.js'>https://github.com/mdaines/viz.js</a></p>";
+    } else {
+      url = url.substring(i + 1);
+      var request = new XMLHttpRequest();
+      request.addEventListener("load", function() {
+        document.body.innerHTML += Viz(this.responseText);
+      });
+      request.open("GET", url);
+      request.send();
+    }
+
+    </script>
+</body>
+</html>
+
