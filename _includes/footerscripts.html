@@ -26,3 +26,49 @@
     });
   </script>
   
+  <!-- Mermaid -->
+
+  <script>
+    // Add class to the pre element
+    document.addEventListener('DOMContentLoaded', function () {
+        var preElements = document.querySelectorAll('pre code.language-mermaid');
+        preElements.forEach(function (codeElement) {
+            // Add class to the parent pre element
+            codeElement.parentNode.classList.add('premermaid');
+        });
+    });
+</script>
+
+<!-- Pseudocode -->
+
+<script>
+  pseudocode.renderElement(document.getElementById("algorithm"), { lineNumber: true });;
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      // Get the first code block with the language "pseudocode"
+      var codeBlock = document.querySelector('code.language-pseudocode');
+
+      if (codeBlock) {
+          // Create a <pre> element with the ID "algorithm"
+          var preElement = document.createElement('pre');
+          preElement.id = 'algorithm';
+
+          // Set the content of the <pre> element to the code content
+          preElement.textContent = codeBlock.textContent.trim();
+
+          // Replace the code block's parent with the <pre> element
+          codeBlock.parentNode.replaceWith(preElement);
+      }
+  });
+</script>
+
+
+<!-- Dot -->
+
+
+
+
+

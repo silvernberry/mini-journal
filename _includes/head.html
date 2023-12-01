@@ -18,8 +18,24 @@
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <!-- mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          mermaid.initialize({ startOnLoad: true });
+          mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+        });
+      </script>
+    <!-- katex pseudocode -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"
+        integrity="sha512-EKW5YvKU3hpyyOcN6jQnAxO/L8gts+YdYV6Yymtl8pk9YlYFtqJgihORuRoBXK8/cOIlappdU6Ms8KdK6yBCgA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <!-- Pseudocode -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.js"> </script>
+    <!-- dot -->
+    <script src="{{site.baseurl}}/assets/js/viz-standalone.js"></script>
     <!-- rss -->
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ "/rss.xml" | prepend: site.baseurl }}" />
-     
 </head>
   
