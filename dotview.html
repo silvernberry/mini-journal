@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-</head>
-<body>
-  <script src="{{site.baseurl}}/viz-lite.js"></script>
+<!--
+    This script can be used to render a .dot file from a URL.
+    Put it on a webserver and call like:
 
-  <script>
+    http://my.web/dotview.html?http://somewhere.net/dir/cool.dot
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script src="./assets/js/viz-lite.js"></script>
+    <script>
 
     var url = window.location.href;
     var i = url.indexOf("?");
     if (i == -1) {
       var b = document.body;
       b.innerHTML += "<p>This is online Graphviz .dot file viewer.</p>";
-      b.innerHTML += "<p>Usage: " + url + "?&lt;url.dot&gt;</p>";
-      var ex_url = url + "?" + url.substring(0, url.lastIndexOf("/") + 1) + "example.dot";
-      b.innerHTML += "<p>Example: <a href='" + ex_url + "'>" + ex_url + "</a></p>";
       b.innerHTML += "<p>Based on <a href='https://github.com/mdaines/viz.js'>https://github.com/mdaines/viz.js</a></p>";
     } else {
       url = url.substring(i + 1);
@@ -28,7 +30,6 @@
     }
 
     </script>
-</body>
+  </body>
 </html>
-
 
