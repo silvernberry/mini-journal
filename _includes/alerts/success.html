@@ -1,5 +1,6 @@
 <div class="asuccess">
-    <span class="atitle"><i class='bx aimg bx-check-circle'></i><strong>Success</strong> </span> {{ include.content }}
+    <span class="atitle"><i class='bx aimg bx-check-circle'></i><strong>Success</strong> </span> 
+    <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
 
 

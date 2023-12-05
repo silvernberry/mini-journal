@@ -1,5 +1,6 @@
 <div class="aerror">
-    <span class="atitle"><i class='bx aimg bx-error-circle'></i><strong>Error</strong> </span> {{ include.content }}
+    <span class="atitle"><i class='bx aimg bx-error-circle'></i><strong>Error</strong> </span> 
+    <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
 
 

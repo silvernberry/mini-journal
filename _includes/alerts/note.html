@@ -1,4 +1,5 @@
 <div class="anote">
-    <span class="atitle"><i class='bx aimg bx-edit-alt'></i><strong>Note</strong> </span> {{ include.content }}
+    <span class="atitle"><i class='bx aimg bx-edit-alt'></i><strong>Note</strong> </span> 
+    <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
     
