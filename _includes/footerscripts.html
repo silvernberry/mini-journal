@@ -40,28 +40,25 @@
 </script>
 
 <!-- Pseudocode -->
-
-<script>
-  pseudocode.renderElement(document.getElementById("algorithm"), { lineNumber: true });;
-</script>
-
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-      // Get the first code block with the language "pseudocode"
-      var codeBlock = document.querySelector('code.language-pseudocode');
+      // Get all code blocks with the language "pseudocode"
+      var codeBlocks = document.querySelectorAll('code.language-pseudocode');
 
-      if (codeBlock) {
-          // Create a <pre> element with the ID "algorithm"
+      codeBlocks.forEach(function (codeBlock, index) {
+          // Create a <pre> element with a unique ID
           var preElement = document.createElement('pre');
-          preElement.id = 'algorithm';
+          preElement.id = 'algorithm_' + index;
 
           // Set the content of the <pre> element to the code content
           preElement.textContent = codeBlock.textContent.trim();
 
           // Replace the code block's parent with the <pre> element
           codeBlock.parentNode.replaceWith(preElement);
-      }
+
+          // Render the pseudocode for each <pre> element
+          pseudocode.renderElement(document.getElementById('algorithm_' + index), { lineNumber: true });
+      });
   });
 </script>
 
