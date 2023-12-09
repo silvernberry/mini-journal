@@ -1,5 +1,7 @@
-<div class="aimportant">
-    <span class="atitle"><i class='bx aimg bx-error'></i><strong>Important</strong> </span>
+{% assign importnat_count = importnat_count | plus: 1 %}
+
+<div  id="important-{{importnat_count}}"  class="aimportant asel">
+    <span class="atitle"><i class='bx aimg bx-error'></i><a href="#important-{{importnat_count}}">Important - {{importnat_count}}</a></span>
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
 

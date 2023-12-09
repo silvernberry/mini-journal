@@ -1,5 +1,7 @@
-<div class="anote">
-    <span class="atitle"><i class='bx aimg bx-edit-alt'></i><strong>Note</strong> </span> 
+{% assign note_count = note_count | plus: 1 %}
+
+<div id="note-{{note_count}}" class="anote asel">
+    <span class="atitle"><i class='bx aimg bx-edit-alt'></i><a href="#note-{{note_count}}">Note - {{note_count}}</a></span> 
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
     

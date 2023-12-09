@@ -1,5 +1,7 @@
-<div class="acomplete">
-    <span class="atitle"><i class='bx aimg bx-check-circle'></i><strong>Complete</strong> </span> 
+{% assign complete_count = complete_count | plus: 1 %}
+
+<div id="complete-{{complete_count}}" class="acomplete asel">
+    <span class="atitle"><i class='bx aimg bx-check-circle'></i><a href="#complete-{{complete_count}}">Complete - {{complete_count}}</a></span> 
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
 

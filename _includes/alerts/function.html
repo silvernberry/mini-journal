@@ -1,0 +1,8 @@
+{% assign function_count = function_count | plus: 1 %}
+
+<div id="function-{{function_count}}" class="afunction asel">
+    <span class="atitle"><i class=' aimg bx bx-wrench' ></i><a href="#function-{{function_count}}">Function - {{function_count}}</a></span> 
+    <div id="acontent">{{ include.content | markdownify }}</div>
+</div>
+
+

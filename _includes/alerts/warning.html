@@ -1,5 +1,7 @@
-<div class="awarning">
-    <span class="atitle"><i class='bx aimg bx-error'></i> <strong>Warning</strong> </span> 
+{% assign warning_count = warning_count | plus: 1 %}
+
+<div id="warning-{{warning_count}}" class="awarning asel">
+    <span class="atitle"><i class='bx aimg bx-error'></i><a href="#warning-{{warning_count}}">Warning - {{warning_count}}</a></span> 
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
 

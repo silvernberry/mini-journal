@@ -1,4 +1,6 @@
-<div class="acheck">
-    <span class="atitle"><i class='bx aimg bx-check-circle'></i><strong>Check</strong> </span> 
+{% assign check_count = check_count | plus: 1 %}
+
+<div id="check-{{check_count}}" class="acheck asel">
+    <span class="atitle"><i class='bx aimg bx-check-circle'></i><a href="#check-{{check_count}}">Check - {{check_count}}</a></span> 
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>

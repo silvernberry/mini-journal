@@ -1,5 +1,7 @@
-<div class="aerror">
-    <span class="atitle"><i class='bx aimg bx-error-circle'></i><strong>Error</strong> </span> 
+{% assign error_count = error_count | plus: 1 %}
+
+<div id="error-{{error_count}}"  class="aerror asel">
+    <span class="atitle"><i class='bx aimg bx-error-circle'></i><a href="#error-{{error_count}}">Error - {{error_count}}</a></span> 
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
 

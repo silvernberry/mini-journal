@@ -1,0 +1,8 @@
+{% assign statement_count = statement_count | plus: 1 %}
+
+<div id="statement-{{statement_count}}" class="astatement asel">
+    <span class="atitle"><i class='bx aimg bx-check-double'></i><a href="#statement-{{statement_count}}">Statement - {{statement_count}}</a></span> 
+    <div id="acontent">{{ include.content | markdownify }}</div>
+</div>
+
+

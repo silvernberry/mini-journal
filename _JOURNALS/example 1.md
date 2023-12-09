@@ -9,8 +9,31 @@ contributors: Name1, Name 2
 reviewers: username1, username2
 ---
 
+{% include alerts/condition.html content="hello"%}
+{% include alerts/expression.html content="hello"%}
+{% include alerts/function.html content="hello"%}
+{% include alerts/statement.html content="hello"%}
+{% include alerts/algorithm.html content="hello"%}
+{% include alerts/check.html content="hello"%}
+{% include alerts/complete.html content="hello"%}
+{% include alerts/condition.html content="hello"%}
+{% include alerts/danger.html content="hello"%}
+{% include alerts/definition.html content="hello"%}
+{% include alerts/error.html content="hello"%}
+{% include alerts/example.html content="hello"%}
+{% include alerts/expression.html content="hello"%}
+{% include alerts/function.html content="hello"%}
+{% include alerts/important.html content="hello"%}
+{% include alerts/info.html content="hello"%}
+{% include alerts/issue.html content="hello"%}
+{% include alerts/note.html content="hello"%}
+{% include alerts/solution.html content="hello"%}
+{% include alerts/statement.html content="hello"%}
+{% include alerts/success.html content="hello"%}
+{% include alerts/tip.html content="hello"%}
+{% include alerts/warning.html content="hello"%}
 
-{% include alerts/definition.html content="
+{% include alerts/info.html content="
 
 ## Discrete State Machine (DSM)
 

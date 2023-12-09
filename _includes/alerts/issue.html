@@ -1,5 +1,7 @@
-<div class="aissue">
-    <span class="atitle"><i class='bx aimg bx-disc'></i><strong>Issue</strong> </span> 
+{% assign issue_count = issue_count | plus: 1 %}
+
+<div id="issue-{{issue_count}}"  class="aissue asel">
+    <span class="atitle"><i class='bx aimg bx-disc'></i><a href="#issue-{{issue_count}}">Issue - {{issue_count}}</a></span> 
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
 

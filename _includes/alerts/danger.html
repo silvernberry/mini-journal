@@ -1,5 +1,7 @@
-<div class="adanger">
-    <span class="atitle"><i class='bx aimg bx-error-alt'></i><strong>Danger</strong> </span>
+{% assign danger_count = danger_count | plus: 1 %}
+
+<div id="danger-{{danger_count}}" class="adanger asel">
+    <span class="atitle"><i class='bx aimg bx-error-alt'></i><a href="#danger-{{danger_count}}">Danger - {{danger_count}}</a></span>
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
 

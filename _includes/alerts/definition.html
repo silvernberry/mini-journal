@@ -1,4 +1,6 @@
-<div class="adefenition">
-    <span class="atitle"><i class='bx aimg bx-file-find'></i><strong>Definition</strong> </span> 
+{% assign defenition_count = defenition_count | plus: 1 %}
+
+<div id="definition-{{definition_count}}" class="adefenition asel">
+    <span class="atitle"><i class='bx aimg bx-file-find'></i><a href="#definition-{{definition_count}}">Definition - {{defenition_count}}</a></span> 
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>

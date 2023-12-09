@@ -1,0 +1,8 @@
+{% assign condition_count = condition_count | plus: 1 %}
+
+<div id="condition-{{condition_count}}"  class="acondition asel">
+    <span class="atitle"><i class='bx aimg bx-check-square'></i><a href="#condition-{{condition_count}}">Condition - {{condition_count}}</a></span> 
+    <div id="acontent">{{ include.content | markdownify }}</div>
+</div>
+
+

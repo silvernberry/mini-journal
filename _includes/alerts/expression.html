@@ -1,0 +1,8 @@
+{% assign expression_count = expression_count | plus: 1 %}
+
+<div id="expression-{{expression_count}}" class="aexpression asel">
+    <span  class="atitle"><i class='bx aimg bxs-right-arrow-alt'></i><a href="#expression-{{expression_count}}">Expression - {{expression_count}}</a></span> 
+    <div id="acontent">{{ include.content | markdownify }}</div>
+</div>
+
+

@@ -1,5 +1,7 @@
-<div class="asolution">
-    <span class="atitle"><i class='bx aimg bx-check-circle'></i><strong>Solution</strong> </span> 
+{% assign solution_count = solution_count | plus: 1 %}
+
+<div id="solution-{{solution_count}}" class="asolution asel">
+    <span class="atitle"><i class='bx aimg bx-check-circle'></i><a href="#solution-{{solution_count}}">Solution - {{solution_count}}</a></span> 
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
 

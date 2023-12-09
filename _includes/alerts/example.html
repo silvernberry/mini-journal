@@ -1,5 +1,7 @@
-<div class="aexample">
-    <span class="atitle"><i class='bx aimg bx-expand-horizontal' ></i><strong>Example</strong> </span> 
+{% assign example_count = example_count | plus: 1 %}
+
+<div id="example-{{example_count}}"  class="aexample asel">
+    <span class="atitle"><i class='bx aimg bx-expand-horizontal' ></i><a href="#error-{{error_count}}">Example - {{example_count}}</a></span> 
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
 

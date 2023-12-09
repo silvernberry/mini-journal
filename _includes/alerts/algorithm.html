@@ -1,4 +1,6 @@
-<div class="aalgorithm">
-    <span class="atitle"><i class='bx aimg bx-code-curly'></i><strong>Algorithm</strong> </span> 
+{% assign algorithm_count = algorithm_count | plus: 1 %}
+
+<div id="algorith-{{algorithm_count}}" class="aalgorithm asel">
+    <span class="atitle"><i class='bx aimg bx-code-curly'></i><a href="#algorithm-{{algorithm_count}}">Algorithm - {{ algorithm_count }}</a></span> 
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>

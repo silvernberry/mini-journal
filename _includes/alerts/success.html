@@ -1,5 +1,7 @@
-<div class="asuccess">
-    <span class="atitle"><i class='bx aimg bx-check-circle'></i><strong>Success</strong> </span> 
+{% assign success_count = success_count | plus: 1 %}
+
+<div id="success-{{success_count}}" class="asuccess asel">
+    <span class="atitle"><i class='bx aimg bx-check-circle'></i><a href="#success-{{success_count}}">Success - {{success_count}}</a></span> 
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
 

@@ -1,4 +1,6 @@
-<div class="ainfo">
-    <span class="atitle"><i class='bx aimg bx-info-circle'></i> <strong>Info</strong> </span>
+{% assign info_count = info_count | plus: 1 %}
+
+<div id="important-{{importnat_count}}" class="ainfo asel">
+    <span class="atitle"><i class='bx aimg bx-info-circle'></i><a href="#important-{{importnat_count}}">Info - {{info_count}}</a></span>
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>

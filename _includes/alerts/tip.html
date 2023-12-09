@@ -1,5 +1,7 @@
-<div class="atip">
-    <span class="atitle"><i class='bx aimg bx-bulb'></i><strong>Tip</strong> </span>
+{% assign tip_count = tip_count | plus: 1 %}
+
+<div id="tip-{{tip_count}}" class="atip asel">
+    <span class="atitle"><i class='bx aimg bx-bulb'></i><a href="#tip-{{tip_count}}">Tip - {{tip_count}}</a></span>
     <div id="acontent">{{ include.content | markdownify }}</div>
 </div>
 

@@ -8,13 +8,13 @@
   --body-text-primary: #E6EDF3;
   --link-primary: #8805EE;
   --code-primary: #1d1d1d;
-  --alerts-bluebox-primary: none;
+  --alerts-bluebox-primary: #202020;
   --alerts-blueborder-primary:#4eb1d7;
-  --alerts-redbox-primary: none;
+  --alerts-redbox-primary: #202020;
   --alerts-redborder-primary:#e7017a;
-  --alerts-greenbox-primary:none;
+  --alerts-greenbox-primary:#202020;
   --alerts-greenborder-primary:#4ed767;
-  --alerts-voiletbox-primary:none;
+  --alerts-voiletbox-primary: #202020;
   --alerts-voiletborder-primary:#b04ed7;
 }
 .light-theme{
@@ -384,31 +384,38 @@ table td {
 .atitle{
   display: flex;
   align-items: center;
-  font-size: 18px;
-  margin-bottom: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+.asel a{
+  color: var(--body-text-primary);
+}
+.asel a:hover{
+  text-decoration: none;
 }
 .aimg {
   font-size: 22px; /* Adjust the font size to your preference */
-  margin-right: 10px; /* Add some space between the icon and text */
+  margin-right: 5px; /* Add some space between the icon and text */
 }
-.ainfo, .anote, .atip, .aexample{
+.ainfo, .anote, .atip, .aexample, .adefinition{
   font-size: 15px;
   padding: 15px;
   background-color: var(--alerts-bluebox-primary); 
   color: var(--body-text-primary); 
-  border-radius: 4px; 
+  border-radius: 8px; 
   margin-bottom: 15px;
-  border: 1px solid var(--alerts-blueborder-primary);
-  border-left: 3px solid var(--alerts-blueborder-primary);
+  border: 0px solid var(--alerts-blueborder-primary);
+  border-left: 4px solid var(--alerts-blueborder-primary);
 }
 .asolution, .asuccess, .acheck, .acomplete{
   font-size: 15px;
   padding: 15px;
   background-color: var(--alerts-greenbox-primary); 
   color: var(--body-text-primary); 
-  border-radius: 4px;
+  border-radius: 8px;
   margin-bottom: 15px;
-  border: 1px solid var(--alerts-greenborder-primary);
+  border: 0px solid var(--alerts-greenborder-primary);
   border-left: 4px solid var(--alerts-greenborder-primary);
 }
 .aerror, .aissue, .awarning, .adanger{
@@ -416,21 +423,21 @@ table td {
   padding: 15px;
   background-color: var(--alerts-redbox-primary); 
   color: var(--body-text-primary); 
-  border-radius: 4px; 
+  border-radius: 8px; 
   margin-bottom: 15px;
-  border: 1px solid var(--alerts-redborder-primary);
-  border-left: 3px solid var(--alerts-redborder-primary);
+  border: 0px solid var(--alerts-redborder-primary);
+  border-left: 4px solid var(--alerts-redborder-primary);
 }
 
-.aimportant, .adefenition, .aalgorithm{
+.aimportant, .aalgorithm, .acondition, .aexpression, .afunction, .astatement{
   font-size: 15px;
   padding: 15px;
   background-color: var(--alerts-voiletbox-primary); 
   color: var(--body-text-primary); 
-  border-radius: 4px; 
+  border-radius: 8px; 
   margin-bottom: 15px;
-  border: 1px solid var(--alerts-voiletborder-primary);
-  border-left: 3px solid var(--alerts-voiletborder-primary);
+  border: 0px solid var(--alerts-voiletborder-primary);
+  border-left: 4px solid var(--alerts-voiletborder-primary);
 }
 
 /* giscus */
