@@ -388,7 +388,7 @@ table td {
   align-items: center;
   font-size: 16px;
   margin-bottom: 15px;
-  font-weight: normal;
+  font-weight: 500;
 }
 .asel a{
   color: var(--body-text-primary);
