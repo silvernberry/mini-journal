@@ -15,27 +15,29 @@
     </div>
     
     <script>
-        var icon = document.getElementById("themeicon");
-        var isLightTheme = localStorage.getItem("theme") === "light";
-      
-        // Set the initial theme based on the stored value
-        if (isLightTheme) {
+      var icon = document.getElementById("themeicon");
+      var isLightTheme = localStorage.getItem("theme") === "light";
+  
+      // Set the initial theme based on the stored value
+      if (isLightTheme) {
           document.body.classList.add("light-theme");
           icon.src = "{{site.baseurl}}/assets/images/dark.svg";
-        }
-      
-        icon.onclick = function () {
+      }
+  
+      icon.onclick = function () {
           document.body.classList.toggle("light-theme");
           isLightTheme = document.body.classList.contains("light-theme");
-      
+  
           // Store the theme preference in localStorage
           if (isLightTheme) {
-            localStorage.setItem("theme", "light");
-            icon.src = "{{site.baseurl}}/assets/images/dark.svg";
+              localStorage.setItem("theme", "light");
+              icon.src = "{{site.baseurl}}/assets/images/dark.svg";
           } else {
-            localStorage.setItem("theme", "dark");
-            icon.src = "{{site.baseurl}}/assets/images/light.svg";
+              localStorage.setItem("theme", "dark");
+              icon.src = "{{site.baseurl}}/assets/images/light.svg";
           }
-        };
-      </script>
-      
+  
+          // Refresh the page to apply Giscus theme changes
+          location.reload();
+      };
+  </script>

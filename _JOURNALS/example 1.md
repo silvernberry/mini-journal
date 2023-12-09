@@ -9,6 +9,21 @@ contributors: Name1, Name 2
 reviewers: username1, username2
 ---
 
+| Author(s)           | Key Contribution                                                           |
+|---------------------|---------------------------------------------------------------------------|
+| [Buterin](https://github.com/ethereum/wiki/wiki/White-Paper)             | Proposed the concept of a blockchain with a Turing-complete language.     |
+| [Dwork and Naor](https://web.archive.org/web/20170810035254/http://www.wisdom.weizmann.ac.il/~naor/PAPERS/pvp.pdf)      | Introduced the idea of using "proof-of-work" for value transmission.       |
+| [Adam Back](https://web.archive.org/web/20170810043047/http://www.hashcash.org/papers/amortizable.pdf)           | Developed a similar system using "proof-of-work."                        |
+| [Vivek Vishnumurthy](https://web.archive.org/web/20170810031834/https://www.cs.cornell.edu/people/egs/papers/karma.pdf)  | Used "proof-of-work" for peer-to-peer file trading with security measures. |
+| [Nakamoto](https://www.mail-archive.com/cryptography@metzdowd.com/msg09959.html)            | Created Bitcoin, the first widely adopted decentralized ledger.           |
+| [Sprankel](https://web.archive.org/web/20170810025028/http://www.coderblog.de/wp-content/uploads/technical-basis-of-digital-currencies.pdf)            | Discussed Litecoin and Primecoin as Bitcoin alternatives.                |
+| [Aron](http://www.sciencedirect.com/science/article/pii/S0262407912601055)                | Explored Namecoin, a decentralized name-resolution system.               |
+| [Willet](https://web.archive.org/web/20170810035927/https://github.com/OmniLayer/spec)              | Proposed Mastercoin, a protocol with additional features on top of Bitcoin. |
+| [Rosenfeld](https://web.archive.org/web/20180220235952/https://github.com/Colored-Coins/Colored-Coins-Protocol-Specification)           | Suggested Coloured Coins, allowing token creation and tracking in Bitcoin. |
+| [Boutellier](https://web.archive.org/web/20170810040208/https://www.springer.com/gb/book/9783319040158)          | Discussed Ripple's "federated" system for currency exchange.              |
+| [Szabo](https://web.archive.org/web/20170810042659/http://firstmonday.org/ojs/index.php/fm/article/view/548) and [Miller](https://drive.google.com/file/d/0Bw0VXJKBgYPMS0J2VGIyWWlocms/edit?usp=sharing).    | Early work on smart contracts, predicting their impact on cooperation.    |
+
+
 {% include alerts/condition.html content="hello"%}
 {% include alerts/expression.html content="hello"%}
 {% include alerts/function.html content="hello"%}

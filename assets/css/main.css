@@ -6,8 +6,9 @@
   --hr-primary: #AA6FD9;
   --header-text: #8805EE;
   --body-text-primary: #E6EDF3;
+  --table-head:#0A0A0A;
   --link-primary: #8805EE;
-  --code-primary: #1d1d1d;
+  --code-primary: #220f0f;
   --alerts-bluebox-primary: #202020;
   --alerts-blueborder-primary:#4eb1d7;
   --alerts-redbox-primary: #202020;
@@ -23,6 +24,7 @@
   --hr-primary: #FAFAFA;
   --header-text: #FFF;
   --body-text-primary: #252525;
+  --table-head:#b184d6;
   --link-primary: #8805EE;
   --code-primary: #8a8191;
   --alerts-bluebox-primary:#eaf4f7;
@@ -363,7 +365,7 @@ table th, table td {
   padding: 10px 15px;
 }
 table th {
-  background-color: var(--header-primary);
+  background-color: var(--table-head);
   border: 1px solid #dedede;
   border-bottom-color: #c9c9c9;
 }
