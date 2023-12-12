@@ -9,6 +9,14 @@ contributors: Name1, Name 2
 reviewers: username1, username2
 ---
 
+
+```mermaid
+graph LR
+  v_1 --e_1 = v_1, v_2--> v_2
+  v_2 --e_2 = v_2, v_(2-1)--> ...
+  ... --e_i = v_i, v_(i-1)--> v_n
+```
+
 | Author(s)           | Key Contribution                                                           |
 |---------------------|---------------------------------------------------------------------------|
 | [Buterin](https://github.com/ethereum/wiki/wiki/White-Paper)             | Proposed the concept of a blockchain with a Turing-complete language.     |

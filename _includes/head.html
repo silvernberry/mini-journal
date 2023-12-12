@@ -10,6 +10,9 @@
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
     {%- endif -%}
+    <script src="{{site.baseurl}}/assets/js/breadcrumbs.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- rouge -->
     <link href="{{site.baseurl}}/assets/css/syntax.css" rel="stylesheet" >
     <!-- mathjax -->
