@@ -553,7 +553,6 @@ padding: 25px;
   }
   .MathJax{
     overflow-x: auto;
-    display: block;
   }
   .ps-root{
     overflow-x: auto;

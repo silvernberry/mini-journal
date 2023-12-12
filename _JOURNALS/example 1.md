@@ -20,6 +20,10 @@ reviewers: username1, username2
 
 ##1. Third
 
+Probability of branch $A$ being chosen: $\mathbb{P}_A = \frac{v}{V}$, where $v$ = Number of validators staking on branch $A$ and $V$ = Total number of validators in the network.
+
+Probability of branch $B$ being chosen: $\mathbb{P}_B = \frac{w}{V}$, where $w$ = Number of validators
+staking on branch $B$.
 
 $$
 \text{Priority Level} = \begin{cases}
