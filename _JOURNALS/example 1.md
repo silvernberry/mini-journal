@@ -8,6 +8,30 @@ giscus: true
 contributors: Name1, Name 2
 reviewers: username1, username2
 ---
+#1. top
+
+##1. At first
+
+###1. One thing
+
+###1. Another thing
+
+##1. Second
+
+##1. Third
+
+
+$$
+\text{Priority Level} = \begin{cases}
+1, & \text{if } \text{Low Gas Price} \leq 1 \\\\
+2, & \text{if } 1 \leq \text{Mid Gas Price} \leq 2 \\\\
+3, & \text{if } \text{High Gas Price} > 2 \\\\
+\end{cases}
+$$
+
+$$
+\text{TxPriority }[0,1] = \frac{\text{Priority Level}}{6} + \frac{\mathbb{C}(\text{Reputation})-\mathbb{S}(\text{Rep}_{min})}{(\mathbb{S}(\text{Rep}_{max})-\mathbb{S}(\text{Rep}_{min}))\cdot (0.5)}
+$$
 
 
 ```mermaid
@@ -17,9 +41,9 @@ graph LR
   ... --e_i = v_i, v_(i-1)--> v_n
 ```
 
-| Author(s)           | Key Contribution                                                           |
+| Author(s)           | Key Contribution                                                           |            hello kanfnsnlknlkkkkmkkkkkkkkkkkkkkkkkk    |
 |---------------------|---------------------------------------------------------------------------|
-| [Buterin](https://github.com/ethereum/wiki/wiki/White-Paper)             | Proposed the concept of a blockchain with a Turing-complete language.     |
+| [Buterin](https://github.com/ethereum/wiki/wiki/White-Paper)             | Proposed the concept of a blockchain with a |Turing-complete language.     |
 | [Dwork and Naor](https://web.archive.org/web/20170810035254/http://www.wisdom.weizmann.ac.il/~naor/PAPERS/pvp.pdf)      | Introduced the idea of using "proof-of-work" for value transmission.       |
 | [Adam Back](https://web.archive.org/web/20170810043047/http://www.hashcash.org/papers/amortizable.pdf)           | Developed a similar system using "proof-of-work."                        |
 | [Vivek Vishnumurthy](https://web.archive.org/web/20170810031834/https://www.cs.cornell.edu/people/egs/papers/karma.pdf)  | Used "proof-of-work" for peer-to-peer file trading with security measures. |
