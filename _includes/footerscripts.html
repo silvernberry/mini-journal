@@ -72,5 +72,53 @@
   });
 </script>
 
+<!-- Ordered numbering -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      // Function to add ordered numbering to headers
+      function addNumberingToHeaders() {
+          var mainContent = document.getElementById("maincontent");
+          var headers = mainContent.querySelectorAll("h1, h2, h3, h4, h5, h6");
+          
+          var currentNumber = [0, 0, 0, 0, 0, 0];
 
+          headers.forEach(function (header) {
+              var level = parseInt(header.tagName.charAt(1));
+              
+              // Increment the current level and reset lower levels
+              currentNumber[level - 1]++;
+              for (var i = level; i < currentNumber.length; i++) {
+                  currentNumber[i] = 0;
+              }
 
+              // Create the numbering string
+              var numbering = currentNumber.slice(0, level).join(".");
+
+              // Add the numbering to the header text
+              var originalText = header.textContent;
+              header.textContent = numbering + ". " + originalText;
+          });
+      }
+
+      // Call the function when the content is loaded
+      addNumberingToHeaders();
+  });
+</script>
+
+<!-- Hash-link -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var mainContent = document.getElementById('maincontent');
+  var headings = mainContent.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+  headings.forEach(function (heading) {
+    var hashLink = document.createElement('a');
+    hashLink.className = 'heading-link';
+    hashLink.href = '#' + heading.id;
+    hashLink.textContent = '#';
+
+    heading.appendChild(hashLink);
+  });
+});
+</script>
